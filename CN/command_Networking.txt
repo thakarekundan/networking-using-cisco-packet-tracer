@@ -1,0 +1,41 @@
+			Password On Enable
+enable
+configure terminal
+hostname s1
+line console 0
+password fsdhjk
+login
+exit
+exit
+
+
+			Password on Configuration
+en
+conf t
+enable secret cisco123
+exit
+
+
+			Banner Message
+s1>en
+Password: 
+s1#banner motd x Hello User!!!
+          ^
+% Invalid input detected at '^' marker.
+	
+s1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+s1(config)#banner motd x Hello User!!
+Enter TEXT message.  End with the character 'x'.
+
+Only Autorized User Can Access
+Password Hint: Ci
+x
+
+s1(config)#exit
+s1#
+%SYS-5-CONFIG_I: Configured from console by console
+exit
+
+
+

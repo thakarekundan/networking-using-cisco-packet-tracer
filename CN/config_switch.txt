@@ -1,0 +1,45 @@
+Lab 2 Command on switch i CLI
+
+Press RETURN to get started!
+
+
+
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname $1
+$1(config)#enable password cisco
+$1(config)#service password-encryption
+$1(config)#enable secret class
+$1(config)#banner motd " Warning Authorized person only! "
+$1(config)#line console 0
+$1(config-line)#password kundan
+$1(config-line)#login
+$1(config-line)#exit
+$1(config)#line vty 0 4
+$1(config-line)#passowrd kundan
+                    ^
+% Invalid input detected at '^' marker.
+	
+$1(config-line)#password kundan
+$1(config-line)#login
+$1(config-line)#exit
+$1(config)#interface vlan
+% Incomplete command.
+$1(config)#inter
+% Incomplete command.
+$1(config)#inter
+% Incomplete command.
+$1(config)#line vty 0 4
+$1(config-line)#password cisco
+$1(config-line)#login
+$1(config-line)#exit
+$1(config)#inter
+% Incomplete command.
+$1(config)#line vty 0 4
+$1(config-line)#password ciscol
+$1(config-line)#login
+$1(config-line)#exit
+$1(config)#inter
+% Incomplete command.
+$1(config)#
